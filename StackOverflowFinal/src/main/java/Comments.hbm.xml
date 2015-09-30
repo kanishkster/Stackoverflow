@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cmad.database.Comments" table="Comments">
+		<id name="commentID" type="int">
+			<column name="commentID" />
+			<generator class="native" />
+		</id>
+		<property name="postID" type="int">
+			<column name="postID"/>
+		</property>		
+		<property name="comment" type="string">
+			<column name="comment" length="4000" />
+		</property>
+		<property name="commenterID" type="int">
+			<column name="commenterID"/>
+		</property>		
+		<property name="commentDate" type="timestamp">
+			<column name="commentDate"/>
+		</property>		
+		<property name="commentVote" type="int">
+			<column name="commentVote"/>
+		</property>
+   
+	</class>
+</hibernate-mapping>

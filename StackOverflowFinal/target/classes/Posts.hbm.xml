@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cmad.database.Posts" table="posts" dynamic-update="true">
+		<id name="PostID" type="int">
+			<column name="PostID" />
+			<generator class="native" />
+		</id>
+		<property name="PostTitle" type="string">
+			<column name="PostTitle" length="250" />
+		</property>
+		<property name="PostDate" type="timestamp">
+			<column name="PostDate"/>
+		</property>
+		<property name="OwnerID" type="int">
+			<column name="OwnerID"/>
+		</property>		
+		<property name="PostVote" type="int">
+			<column name="PostVote"/>
+		</property>
+   
+	</class>
+</hibernate-mapping>
